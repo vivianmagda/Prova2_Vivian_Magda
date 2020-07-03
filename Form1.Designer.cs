@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnergiaEletrica));
             this.lb1 = new System.Windows.Forms.Label();
             this.btR = new System.Windows.Forms.Button();
             this.btI = new System.Windows.Forms.Button();
             this.btC = new System.Windows.Forms.Button();
+            this.btVoltar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btRelatorio = new System.Windows.Forms.Button();
+            this.btSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lb1
@@ -41,7 +45,7 @@
             this.lb1.BackColor = System.Drawing.Color.Transparent;
             this.lb1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lb1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 14F, System.Drawing.FontStyle.Bold);
-            this.lb1.Location = new System.Drawing.Point(64, 54);
+            this.lb1.Location = new System.Drawing.Point(76, 43);
             this.lb1.Name = "lb1";
             this.lb1.Size = new System.Drawing.Size(309, 23);
             this.lb1.TabIndex = 1;
@@ -58,12 +62,13 @@
             this.btR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btR.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btR.Location = new System.Drawing.Point(132, 93);
+            this.btR.Location = new System.Drawing.Point(149, 99);
             this.btR.Name = "btR";
             this.btR.Size = new System.Drawing.Size(152, 40);
             this.btR.TabIndex = 2;
             this.btR.Text = "Residencial";
             this.btR.UseVisualStyleBackColor = false;
+            this.btR.Click += new System.EventHandler(this.btR_Click);
             // 
             // btI
             // 
@@ -76,12 +81,13 @@
             this.btI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btI.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btI.Location = new System.Drawing.Point(132, 159);
+            this.btI.Location = new System.Drawing.Point(149, 233);
             this.btI.Name = "btI";
             this.btI.Size = new System.Drawing.Size(152, 43);
             this.btI.TabIndex = 3;
             this.btI.Text = "Industrial";
             this.btI.UseVisualStyleBackColor = false;
+            this.btI.Click += new System.EventHandler(this.btI_Click);
             // 
             // btC
             // 
@@ -94,12 +100,93 @@
             this.btC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btC.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btC.Location = new System.Drawing.Point(132, 226);
+            this.btC.Location = new System.Drawing.Point(149, 166);
             this.btC.Name = "btC";
             this.btC.Size = new System.Drawing.Size(152, 44);
             this.btC.TabIndex = 4;
             this.btC.Text = "Comercial";
             this.btC.UseVisualStyleBackColor = false;
+            this.btC.Click += new System.EventHandler(this.btC_Click);
+            // 
+            // btVoltar
+            // 
+            this.btVoltar.AutoSize = true;
+            this.btVoltar.BackColor = System.Drawing.Color.SandyBrown;
+            this.btVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btVoltar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btVoltar.FlatAppearance.BorderSize = 0;
+            this.btVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AntiqueWhite;
+            this.btVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btVoltar.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVoltar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btVoltar.Location = new System.Drawing.Point(149, 302);
+            this.btVoltar.Name = "btVoltar";
+            this.btVoltar.Size = new System.Drawing.Size(152, 44);
+            this.btVoltar.TabIndex = 5;
+            this.btVoltar.Text = "Voltar";
+            this.btVoltar.UseVisualStyleBackColor = false;
+            this.btVoltar.Visible = false;
+            this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(88, 156);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(277, 23);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Digite o seu consumo em kWh:";
+            this.label1.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(115, 207);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(223, 20);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.Visible = false;
+            // 
+            // btRelatorio
+            // 
+            this.btRelatorio.AutoSize = true;
+            this.btRelatorio.BackColor = System.Drawing.Color.SandyBrown;
+            this.btRelatorio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btRelatorio.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btRelatorio.FlatAppearance.BorderSize = 0;
+            this.btRelatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AntiqueWhite;
+            this.btRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btRelatorio.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRelatorio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btRelatorio.Location = new System.Drawing.Point(139, 233);
+            this.btRelatorio.Name = "btRelatorio";
+            this.btRelatorio.Size = new System.Drawing.Size(179, 44);
+            this.btRelatorio.TabIndex = 8;
+            this.btRelatorio.Text = "Gerar Relatório";
+            this.btRelatorio.UseVisualStyleBackColor = false;
+            this.btRelatorio.Visible = false;
+            this.btRelatorio.Click += new System.EventHandler(this.btRelatorio_Click);
+            // 
+            // btSair
+            // 
+            this.btSair.AutoSize = true;
+            this.btSair.BackColor = System.Drawing.Color.SandyBrown;
+            this.btSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSair.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btSair.FlatAppearance.BorderSize = 0;
+            this.btSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AntiqueWhite;
+            this.btSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSair.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSair.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btSair.Location = new System.Drawing.Point(149, 302);
+            this.btSair.Name = "btSair";
+            this.btSair.Size = new System.Drawing.Size(152, 44);
+            this.btSair.TabIndex = 9;
+            this.btSair.Text = "Sair";
+            this.btSair.UseVisualStyleBackColor = false;
+            this.btSair.Click += new System.EventHandler(this.btSair_Click);
             // 
             // EnergiaEletrica
             // 
@@ -107,9 +194,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Prova2_Vivian_Magda.Properties.Resources.Screenshot_1__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(407, 331);
+            this.ClientSize = new System.Drawing.Size(457, 382);
+            this.Controls.Add(this.btSair);
+            this.Controls.Add(this.btRelatorio);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btVoltar);
             this.Controls.Add(this.btC);
             this.Controls.Add(this.btI);
             this.Controls.Add(this.btR);
@@ -117,6 +209,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "EnergiaEletrica";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Energia Elétrica";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -128,6 +221,11 @@
         private System.Windows.Forms.Button btR;
         private System.Windows.Forms.Button btI;
         private System.Windows.Forms.Button btC;
+        private System.Windows.Forms.Button btVoltar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btRelatorio;
+        private System.Windows.Forms.Button btSair;
     }
 }
 
