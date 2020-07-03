@@ -20,7 +20,10 @@ namespace Prova2_Vivian_Magda
                 industrial_1 = 0.55,
                 industrial_2 = 0.60,
                 pagar;
-        double consumo;
+        double consumo, preco;
+        string faixa, tipo;
+                
+
 
         private void btRelatorio_Click(object sender, EventArgs e)
         {
@@ -28,29 +31,61 @@ namespace Prova2_Vivian_Magda
 
             if (btR.Visible)
             {
+                tipo = "Residencial";
+
                 if (consumo <= 500)
-                    pagar = consumo * residencial_1;
+                {
+                    preco = residencial_1;
+                    pagar = consumo * preco;
+                    faixa = "Até 500";
+                }
                 else
-                    pagar = consumo * residencial_2;
-                MessageBox.Show(Convert.ToString(pagar));
+                {
+                    preco = residencial_2;
+                    pagar = consumo * preco;
+                    faixa = "Ácima de 500";
+                }
             }
             else if (btC.Visible)
             {
-                if (consumo <= 1000)
-                    pagar = consumo * comercial_1;
+                tipo = "Comercial";
+
+                if (consumo <= 1000) 
+                {
+                    preco = comercial_1;
+                    pagar = consumo * preco;
+                    faixa = "Até 1000";
+                }
+
                 else
-                    pagar = consumo * comercial_2;
-                MessageBox.Show(Convert.ToString(pagar));
+                {
+                    preco = comercial_2;
+                    pagar = consumo * preco;
+                    faixa = "Acima de 1000";
+                }
+                    
             }
             else
             {
+                tipo = "Industrial";
                 if (consumo <= 5000)
-                    pagar = consumo * industrial_1;
+                {
+                    preco = industrial_1;
+                    pagar = consumo * preco;
+                    faixa = "Até 5000";
+                }
                 else
-                    pagar = consumo * industrial_2;
-                MessageBox.Show(Convert.ToString(pagar));
+                {
+                    preco = industrial_2;
+                    pagar = consumo * preco;
+                    faixa = "Acima de 5000";
+                }                    
             }
-                               
+
+            
+            
+            MessageBox.Show($"{tipo};{faixa};{preco};{pagar}");
+
         }
 
         public EnergiaEletrica()
