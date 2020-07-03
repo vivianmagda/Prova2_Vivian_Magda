@@ -1,6 +1,6 @@
 ﻿namespace Prova2_Vivian_Magda
 {
-    partial class EnergiaEletrica
+    partial class FormResidencial
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnergiaEletrica));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormResidencial));
             this.lb1 = new System.Windows.Forms.Label();
             this.btR = new System.Windows.Forms.Button();
             this.btI = new System.Windows.Forms.Button();
-            this.btC = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lb1
@@ -43,9 +42,9 @@
             this.lb1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 14F, System.Drawing.FontStyle.Bold);
             this.lb1.Location = new System.Drawing.Point(64, 54);
             this.lb1.Name = "lb1";
-            this.lb1.Size = new System.Drawing.Size(309, 23);
+            this.lb1.Size = new System.Drawing.Size(302, 23);
             this.lb1.TabIndex = 1;
-            this.lb1.Text = "Selecione o seu tipo de instalação: ";
+            this.lb1.Text = "Selecione o sua faixa de consumo:";
             // 
             // btR
             // 
@@ -58,11 +57,11 @@
             this.btR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btR.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btR.Location = new System.Drawing.Point(132, 93);
+            this.btR.Location = new System.Drawing.Point(113, 109);
             this.btR.Name = "btR";
-            this.btR.Size = new System.Drawing.Size(152, 40);
+            this.btR.Size = new System.Drawing.Size(201, 42);
             this.btR.TabIndex = 2;
-            this.btR.Text = "Residencial";
+            this.btR.Text = "Até 500 kWh";
             this.btR.UseVisualStyleBackColor = false;
             // 
             // btI
@@ -76,32 +75,14 @@
             this.btI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btI.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btI.Location = new System.Drawing.Point(132, 159);
+            this.btI.Location = new System.Drawing.Point(113, 183);
             this.btI.Name = "btI";
-            this.btI.Size = new System.Drawing.Size(152, 43);
+            this.btI.Size = new System.Drawing.Size(201, 45);
             this.btI.TabIndex = 3;
-            this.btI.Text = "Industrial";
+            this.btI.Text = "Acima de 500 kWh";
             this.btI.UseVisualStyleBackColor = false;
             // 
-            // btC
-            // 
-            this.btC.AutoSize = true;
-            this.btC.BackColor = System.Drawing.Color.SandyBrown;
-            this.btC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btC.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btC.FlatAppearance.BorderSize = 0;
-            this.btC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AntiqueWhite;
-            this.btC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btC.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btC.Location = new System.Drawing.Point(132, 226);
-            this.btC.Name = "btC";
-            this.btC.Size = new System.Drawing.Size(152, 44);
-            this.btC.TabIndex = 4;
-            this.btC.Text = "Comercial";
-            this.btC.UseVisualStyleBackColor = false;
-            // 
-            // EnergiaEletrica
+            // FormResidencial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,14 +91,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(407, 331);
-            this.Controls.Add(this.btC);
             this.Controls.Add(this.btI);
             this.Controls.Add(this.btR);
             this.Controls.Add(this.lb1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "EnergiaEletrica";
-            this.Text = "Energia Elétrica";
+            this.Name = "FormResidencial";
+            this.Text = "Energia Elétrica - Residencial";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,7 +107,6 @@
         private System.Windows.Forms.Label lb1;
         private System.Windows.Forms.Button btR;
         private System.Windows.Forms.Button btI;
-        private System.Windows.Forms.Button btC;
     }
 }
 
