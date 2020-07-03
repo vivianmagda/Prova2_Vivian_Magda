@@ -37,6 +37,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btRelatorio = new System.Windows.Forms.Button();
             this.btSair = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lb1
@@ -45,7 +47,7 @@
             this.lb1.BackColor = System.Drawing.Color.Transparent;
             this.lb1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lb1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 14F, System.Drawing.FontStyle.Bold);
-            this.lb1.Location = new System.Drawing.Point(76, 43);
+            this.lb1.Location = new System.Drawing.Point(78, 34);
             this.lb1.Name = "lb1";
             this.lb1.Size = new System.Drawing.Size(309, 23);
             this.lb1.TabIndex = 1;
@@ -62,7 +64,7 @@
             this.btR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btR.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btR.Location = new System.Drawing.Point(149, 99);
+            this.btR.Location = new System.Drawing.Point(149, 89);
             this.btR.Name = "btR";
             this.btR.Size = new System.Drawing.Size(152, 40);
             this.btR.TabIndex = 2;
@@ -81,7 +83,7 @@
             this.btI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btI.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btI.Location = new System.Drawing.Point(149, 233);
+            this.btI.Location = new System.Drawing.Point(149, 201);
             this.btI.Name = "btI";
             this.btI.Size = new System.Drawing.Size(152, 43);
             this.btI.TabIndex = 3;
@@ -100,7 +102,7 @@
             this.btC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btC.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btC.Location = new System.Drawing.Point(149, 166);
+            this.btC.Location = new System.Drawing.Point(149, 143);
             this.btC.Name = "btC";
             this.btC.Size = new System.Drawing.Size(152, 44);
             this.btC.TabIndex = 4;
@@ -119,7 +121,7 @@
             this.btVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btVoltar.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btVoltar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btVoltar.Location = new System.Drawing.Point(149, 302);
+            this.btVoltar.Location = new System.Drawing.Point(149, 306);
             this.btVoltar.Name = "btVoltar";
             this.btVoltar.Size = new System.Drawing.Size(152, 44);
             this.btVoltar.TabIndex = 5;
@@ -134,7 +136,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(88, 156);
+            this.label1.Location = new System.Drawing.Point(87, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(277, 23);
             this.label1.TabIndex = 6;
@@ -143,7 +145,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 207);
+            this.textBox1.Location = new System.Drawing.Point(114, 158);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(223, 20);
             this.textBox1.TabIndex = 7;
@@ -160,9 +162,9 @@
             this.btRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btRelatorio.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btRelatorio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btRelatorio.Location = new System.Drawing.Point(139, 233);
+            this.btRelatorio.Location = new System.Drawing.Point(139, 242);
             this.btRelatorio.Name = "btRelatorio";
-            this.btRelatorio.Size = new System.Drawing.Size(179, 44);
+            this.btRelatorio.Size = new System.Drawing.Size(182, 44);
             this.btRelatorio.TabIndex = 8;
             this.btRelatorio.Text = "Gerar Relatório";
             this.btRelatorio.UseVisualStyleBackColor = false;
@@ -180,13 +182,34 @@
             this.btSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSair.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSair.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btSair.Location = new System.Drawing.Point(149, 302);
+            this.btSair.Location = new System.Drawing.Point(149, 292);
             this.btSair.Name = "btSair";
             this.btSair.Size = new System.Drawing.Size(152, 44);
             this.btSair.TabIndex = 9;
             this.btSair.Text = "Sair";
             this.btSair.UseVisualStyleBackColor = false;
             this.btSair.Click += new System.EventHandler(this.btSair_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label2.Font = new System.Drawing.Font("Berlin Sans FB Demi", 14F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(110, 190);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(211, 23);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Onde você quer salvar?";
+            this.label2.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(114, 216);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(223, 20);
+            this.textBox2.TabIndex = 11;
+            this.textBox2.Visible = false;
             // 
             // EnergiaEletrica
             // 
@@ -197,15 +220,17 @@
             this.BackgroundImage = global::Prova2_Vivian_Magda.Properties.Resources.Screenshot_1__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(457, 382);
-            this.Controls.Add(this.btSair);
-            this.Controls.Add(this.btRelatorio);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btVoltar);
             this.Controls.Add(this.btC);
-            this.Controls.Add(this.btI);
             this.Controls.Add(this.btR);
             this.Controls.Add(this.lb1);
+            this.Controls.Add(this.btRelatorio);
+            this.Controls.Add(this.btI);
+            this.Controls.Add(this.btSair);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "EnergiaEletrica";
@@ -226,6 +251,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btRelatorio;
         private System.Windows.Forms.Button btSair;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 

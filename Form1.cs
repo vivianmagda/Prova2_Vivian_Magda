@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
+using System.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Prova2_Vivian_Magda
 {
@@ -43,7 +46,7 @@ namespace Prova2_Vivian_Magda
                 {
                     preco = residencial_2;
                     pagar = consumo * preco;
-                    faixa = "Ácima de 500";
+                    faixa = "Acima de 500";
                 }
             }
             else if (btC.Visible)
@@ -83,8 +86,23 @@ namespace Prova2_Vivian_Magda
             }
 
             
-            
-            MessageBox.Show($"{tipo};{faixa};{preco};{pagar}");
+            string path = $@"{textBox2.Text}EnergiaEletrica.txt";
+
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+
+            void AddText(FileStream fs, string value)
+            {
+                byte[] info = new UTF8Encoding(true).GetBytes(value);
+                fs.Write(info, 0, info.Length);
+            }
+
+            using (FileStream fs = File.Create(path))
+            {
+                AddText(fs, $"{tipo};{faixa};{preco};{pagar};");
+            }
 
         }
 
@@ -99,14 +117,16 @@ namespace Prova2_Vivian_Magda
             label1.Hide();
             textBox1.Hide();
             btRelatorio.Hide();
+            textBox2.Hide();
+            label2.Hide();
 
             btI.Show();
             btC.Show();
             btR.Show();
             btSair.Show();            
 
-            btC.Location = new System.Drawing.Point(149, 166);
-            btI.Location = new System.Drawing.Point(149, 233);
+            btC.Location = new System.Drawing.Point(149, 143);
+            btI.Location = new System.Drawing.Point(149, 201);
         }
 
         private void btR_Click(object sender, EventArgs e)
@@ -118,6 +138,8 @@ namespace Prova2_Vivian_Magda
             label1.Show();
             textBox1.Show();
             btRelatorio.Show();
+            label2.Show();
+            textBox2.Show();
 
         }
 
@@ -131,6 +153,8 @@ namespace Prova2_Vivian_Magda
             label1.Show();
             textBox1.Show();
             btRelatorio.Show();
+            label2.Show();
+            textBox2.Show();
         }
 
         private void btC_Click(object sender, EventArgs e)
@@ -143,6 +167,8 @@ namespace Prova2_Vivian_Magda
             label1.Show();
             textBox1.Show();
             btRelatorio.Show();
+            label2.Show();
+            textBox2.Show();
 
         }
 
